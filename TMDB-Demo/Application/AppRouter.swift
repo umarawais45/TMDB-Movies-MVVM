@@ -19,6 +19,7 @@ class AppRouter {
         let navigationController = UINavigationController()
         let viewControllerFactory = ViewControllerFactory()
         let viewController = viewControllerFactory.moviesViewController(navigationController: navigationController)
+        viewController.title = "Popular movies"
         navigationController.pushViewController(viewController, animated: false)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

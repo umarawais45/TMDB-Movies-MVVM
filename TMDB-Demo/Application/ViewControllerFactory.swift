@@ -16,9 +16,9 @@ class ViewControllerFactory {
         return viewController
     }
     
-    func movieDetailViewController(navigationController: UINavigationController) -> MovieDetailViewController {
+    func movieDetailViewController(navigationController: UINavigationController, movie: Movie) -> MovieDetailViewController {
         let viewController = Storyboard.main.instantiateViewController(identifier: MovieDetailViewController.storyboardIdentifier) as! MovieDetailViewController
-        viewController.viewModel = MovieDetailViewModel()
+        viewController.viewModel = MovieDetailViewModel(movie: movie)
         return viewController
     }
 }
